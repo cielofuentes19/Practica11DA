@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<style type="text/css">
+    .form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: auto;
+        background-color: cadetblue;
+        border-radius: 25px;
+        color: white;
+    }
+
+    .form div {
+        padding: 10px;
+        text-align: start;
+    }
+
+    .form div label {
+        font-weight: bold;
+    }
+
+    .form div input {
+        width: 5000px;
+    }
+
+    .form div img {
+        width: 400px;
+        height: 400px;
+        background-color: white;
+        border-radius: 500px;
+        text-align: center;
+    }
+
+    .imagen {
+        display: flex;
+        justify-content: center;
+    }
+
+    .form div input {
+        text-align: center;
+        color: black;
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .botones button {
+        margin: 30px;
+        color: black;
+    }
+
+</style>
+
+<div class="jumbotron">
+    <h1>Registro de personal</h1>
+    <p class="lead">Esta es una aplicación web que sirve para registrar la información personal de los nuevos empleados de una determinada empresa.</p>
+    <div class="form">
+        <div class="imagen">
+            <img src="~/user.png"/>
+        </div>
+        <div>
+            <div>
+                <label ID="Label1" asp-for="Nombres" class="control-label">Nombres: </label>
+                <input type="text" placeholder="Ingresa tus nombres" />
+            </div>
+            <div>
+                <label asp-for="Apellidos" class="control-label">Apellidos: </label>
+                <input type="text" placeholder="Ingresa tus apellidos" />
+            </div>
+            <div>
+                <label asp-for="Email" class="control-label">Email: </label>
+                <input type="email" placeholder="Ingresa tu correo electronico" />
+            </div>
+            <div>
+                <label asp-for="Telefono" class="control-label">Telefono: </label>
+                <input type="tel" placeholder="Ingresa tu numero telefonico" />
+            </div>
+            <div>
+                <label asp-for="Fecnac" class="control-label">Fecha de nacimiento: </label>
+                <input type="date" placeholder="Ingresa tu fecha de nacimiento" />
+            </div>
+            <div class="botones">
+                <button>Guardar</button>
+                <button>Borrar</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
